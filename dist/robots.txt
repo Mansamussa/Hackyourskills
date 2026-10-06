@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hys-modern-scroll.triggervideo.chatgpt.site/sitemap.xml

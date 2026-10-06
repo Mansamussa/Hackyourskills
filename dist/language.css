@@ -1,0 +1,29 @@
+.language-switch{position:absolute;z-index:150;top:6px;right:clamp(16px,3vw,48px);display:flex;gap:2px;padding:2px;border:1px solid #ffffff26;border-radius:999px;background:#111510ed;font:500 12px/1 'Inter',Arial,sans-serif}
+.language-switch a{display:grid;place-items:center;min-width:36px;min-height:30px;border-radius:999px;color:#bdc6b3;text-decoration:none;letter-spacing:.04em}
+.language-switch a[aria-current]{background:#addb6626;color:#c3e999}
+.language-switch a:focus-visible{outline:2px solid #ADDB66;outline-offset:2px}
+.navbar .nav-container{padding-top:38px}
+html[lang="nl"] .nav-links{gap:clamp(12px,1.6vw,24px)}
+html[lang="nl"] .hero h1{letter-spacing:-.045em}
+@media(max-width:850px){.language-switch{right:16px;top:4px}.navbar .nav-container{padding-top:40px}.language-switch a{min-width:40px;min-height:32px}}
+
+/* One compact navigation row, with a separate, reachable language switch. */
+@media(max-width:1024px){
+ .navbar .nav-container{min-height:112px;padding:48px max(20px,env(safe-area-inset-right)) 10px max(20px,env(safe-area-inset-left));gap:12px;flex-wrap:wrap}
+ .navbar .nav-logo-img{width:150px;height:50px}
+ .navbar .nav-container>.btn{display:none}
+ .js .menu-toggle{display:block;order:3;margin-left:auto;width:44px;height:44px}
+ .nav-links{order:5;width:100%;padding:8px 0;flex-wrap:wrap;gap:0!important}
+ .js .nav-links{display:none}
+ .js .navbar.menu-open .nav-links{display:grid;grid-template-columns:1fr 1fr}
+ .nav-links a{display:flex;align-items:center;min-height:44px;padding:10px;font-size:14px}
+ .navbar.menu-open{background:#111310;max-height:100dvh;overflow-y:auto;overscroll-behavior:contain}
+ .language-switch{top:4px;right:max(16px,env(safe-area-inset-right))}
+ .language-switch a{min-width:44px;min-height:36px}
+}
+@media(max-width:1024px) and (orientation:landscape) and (max-height:600px){
+ .navbar .nav-container{min-height:64px;padding-block:8px;padding-right:max(126px,env(safe-area-inset-right))}
+ .navbar .nav-logo-img{width:138px;height:46px}
+ .language-switch{top:12px}
+ .js .navbar.menu-open .nav-links{grid-template-columns:repeat(3,1fr)}
+}

@@ -1,0 +1,56 @@
+/* Scope launch fixes without changing the approved composition or animation timing. */
+#main, main, .guide-card-copy, .content-col{min-width:0}
+.commercial-note{max-width:850px;margin:28px auto;color:#bdc6b3;font-size:14px;line-height:1.7}
+#audit-status,#quiz-status{line-height:1.6;color:#d7edb7;scroll-margin-top:100px}
+#audit-status:empty,#quiz-status:empty{display:none}
+#audit-form[aria-busy] button{cursor:wait;opacity:.75}
+.language-switch a{min-width:44px;min-height:44px}
+.navbar .nav-container{padding-top:52px}
+@media(max-width:1050px) and (min-width:851px){.nav-links{gap:12px;font-size:13px}.navbar .nav-container{gap:14px}}
+@media(max-width:850px){
+ .language-switch a{min-width:44px;min-height:44px}
+ .navbar .nav-container{padding-top:52px}
+ .guide-card-copy{overflow-wrap:anywhere}
+ .results-section .guide-card-copy strong{font-size:clamp(19px,5vw,26px)}
+ .guide-card-copy>span,.commercial-note{font-size:14px}
+ .quiz-options .q-option{min-height:48px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
+.quiz-options .q-option{position:relative}
+.quiz-options .q-option input{display:block;position:absolute;width:1px;height:1px;opacity:0}
+.quiz-options .q-option:focus-within{outline:2px solid #ADDB66;outline-offset:3px}
+
+/* Pricing notes share the cards' container; no narrow label column. */
+.guarantee-box.pricing-disclaimer{
+ display:block;grid-template-columns:none;width:100%;max-width:none;
+ margin:28px 0 0;padding:24px 0 0;text-align:left;
+ background:transparent;border-radius:0;box-shadow:none;
+ color:#666b63;font:italic 400 13px/1.8 'Inter',Arial,sans-serif;
+}
+.guarantee-box.pricing-disclaimer > strong{
+ display:block;margin:0 0 14px;color:inherit;
+ font:inherit;font-weight:500;letter-spacing:normal;text-transform:none;
+}
+.guarantee-box.pricing-disclaimer p,
+.guarantee-box.pricing-disclaimer .commercial-note{
+ width:100%;max-width:none;margin:0 0 18px;padding:0;
+ color:inherit;font:inherit;
+}
+.guarantee-box.pricing-disclaimer > div{width:100%;min-width:0}
+.guarantee-box.pricing-disclaimer .guarantee-question,
+.guarantee-box.pricing-disclaimer .guarantee-answer,
+.guarantee-box.pricing-disclaimer .guarantee-details,
+.guarantee-box.pricing-disclaimer .guarantee-details em{
+ color:inherit;font:inherit;
+}
+.guarantee-box.pricing-disclaimer .guarantee-details{margin:0}
+@media(max-width:600px){
+ .guarantee-box.pricing-disclaimer{margin-top:24px;padding-top:20px;line-height:1.85}
+}
+/* Lighter desktop hero support; retain existing sizes and mobile readability. */
+@media(min-width:901px){
+ .hero .hero-support{font-weight:300}
+}
+.buyer-questions h2{margin-bottom:28px}
+.buyer-questions .faq-list{max-width:100%;width:100%}
+.buyer-questions .faq-toggle{width:100%;text-align:left}
